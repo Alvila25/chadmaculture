@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+header, nav, main, section, footer {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 20px 0;
+}
+header.nav-header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 15px;
+  margin-top: 15px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #1a3c5e;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff6f61;
+}
+.language-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.language-switcher select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+.language-switcher select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+header.hero {
+  background: #ecf0f1 url('/static/images/hero-bg.jpg') no-repeat center/cover;
+  color: #333;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+.hero-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #1a3c5e;
+}
+.hero-container p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.hero-container .button {
+  background: #ff6f61;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s;
+  min-width: 44px;
+  min-height: 44px;
+}
+.hero-container .button:hover {
+  background: #e55a50;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1a3c5e;
+}
+section h3 {
+  font-size: 1.4em;
+  margin: 15px 0 10px;
+  color: #1a3c5e;
+}
+.card-list, .gallery, .product-list, .resource-list, .media-list, .nft-list, .tour-list, .story-list, .involvement-list, .artist-list, .proverb-list, .portal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+.card-list li, .gallery img, .product-card, .resource-card, .media-card, .nft-card, .tour-card, .story-card, .involvement-card, .artist-card, .proverb, .portal-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.card-list li:hover, .gallery img:hover, .product-card:hover, .resource-card:hover, .media-card:hover, .nft-card:hover, .tour-card:hover, .story-card:hover, .involvement-card:hover, .artist-card:hover, .proverb:hover, .portal-card:hover {
+  transform: translateY(-5px);
+}
+.card-list li img, .gallery img, .product-card img, .resource-card img, .media-card img, .nft-card img, .tour-card img, .story-card img, .involvement-card img, .artist-card img, .proverb img, .portal-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.card-list li a, .product-card a, .resource-card a, .media-card a, .nft-card a, .tour-card a, .story-card a, .involvement-card a, .artist-card a, .portal-card a {
+  background: #ff6f61;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background 0.3s;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+.card-list li a:hover, .product-card a:hover, .resource-card a:hover, .media-card a:hover, .nft-card a:hover, .tour-card a:hover, .story-card a:hover, .involvement-card a:hover, .artist-card a:hover, .portal-card a:hover {
+  background: #e55a50;
+}
+#map img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+#map .info-box {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: none;
+  width: 280px;
+  text-align: center;
+}
+.quiz-container {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.quiz-container .question {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+.quiz-container .options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quiz-container .submit-btn {
+  background: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  min-width: 44px;
+  min-height: 44px;
+}
+.quiz-container .submit-btn:hover {
+  background: #e55a50;
+}
+.quiz-container .result, .quiz-container .badge {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.quiz-container .result.success {
+  background: #d4edda;
+  color: #155724;
+}
+.quiz-container .result.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#contact label {
+  font-weight: bold;
+  color: #1a3c5e;
+}
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+#contact input:invalid,
+#contact textarea:invalid {
+  border-color: #ff6f61;
+}
+#contact button {
+  background: #ff6f61;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background 0.3s;
+  min-width: 44px;
+  min-height: 44px;
+}
+#contact button:hover {
+  background: #e55a50;
+}
+#contact .form-message {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+#contact .form-message.success {
+  background: #d4edda;
+  color: #155724;
+}
+#contact .form-message.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a3c5e;
+  color: white;
+  border-radius: 8px;
+}
+footer a {
+  color: #ff6f61;
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.contact-info, .social-media {
+  flex: 1;
+  min-width: 200px;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s;
+}
+#back-to-top:hover {
+  background: #e55a50;
+}
+#consent-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#consent-modal .modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+}
+#consent-modal button {
+  background: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+#consent-modal button:hover {
+  background: #e55a50;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .language-switcher {
+    position: static;
+    margin-top: 10px;
+  }
+  .card-list li, .gallery img, .product-card, .resource-card, .media-card, .nft-card, .tour-card, .story-card, .involvement-card, .artist-card, .proverb, .portal-card, #map .info-box {
+    width: 100%;
+    max-width: 300px;
+  }
+  .hero-container h1 {
+    font-size: 2em;
+  }
+  section h2 {
+    font-size: 1.5em;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .hero-container h1 {
+    font-size: 1.8em;
+  }
+  section h2 {
+    font-size: 1.3em;
+  }
+  section h3 {
+    font-size: 1.2em;
+  }
+}
